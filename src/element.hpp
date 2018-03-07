@@ -5,14 +5,14 @@ public:
     size_t operator[](size_t index);
 
 private:
-	unsigned char m_b0 : 1;
-	unsigned char m_b1 : 1;
-	unsigned char m_b2 : 1;
-	unsigned char m_b3 : 1;
-	unsigned char m_b4 : 1;
-	unsigned char m_b5 : 1;
-	unsigned char m_b6 : 1;
-	unsigned char m_b7 : 1;
+    unsigned char m_b0 : 1;
+    unsigned char m_b1 : 1; 
+    unsigned char m_b2 : 1;
+    unsigned char m_b3 : 1;
+    unsigned char m_b4 : 1;
+    unsigned char m_b5 : 1;
+    unsigned char m_b6 : 1;
+    unsigned char m_b7 : 1;
 };
 
 union Element {
@@ -24,8 +24,8 @@ public:
     bool operator<(const Element &other);
 
 private:
-	int m_value;
-	Byte m_bytes[sizeof(int)];
+    int m_value;
+    Byte m_bytes[sizeof(int)];
 };
 
 class MultisetElement {
@@ -41,7 +41,7 @@ public:
     friend void grayCodeGeneration(int, MultisetElement *, int, int);
 private:
     Element m_element;
-	int m_occurrenceNo;
+    int m_occurrenceNo;
 };
 
 void grayCodeGeneration(int n, MultisetElement *array, int depth, int occurenceNo = 1);
